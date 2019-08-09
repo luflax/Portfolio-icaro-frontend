@@ -1,0 +1,50 @@
+.flexContainer{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr)
+}
+.jobsItem{
+    box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.05);
+    border-radius: 4px;
+    margin-right: 15px;
+    margin-top: 15px;
+    -webkit-transition: all 1s;
+    transition: all 1s;
+    position: relative;
+    background: #fff;
+}
+.jobsItem>img{
+    width: 100%;
+}
+.jobMask{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #FFF0;
+    border-radius: 4px;
+    -webkit-transition: all 1.5s ease;
+    transition: all 1.5s ease;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+.jobsItem:hover>.jobMask{
+    background-color: #0005;
+    background-image: linear-gradient(to top, rgba(42, 42, 42, 0.333), rgba(204, 204, 204, 0.287))
+}
+.jobMask>p{
+    color: #FFF0;
+    word-break: break-all;
+    margin-left: 10px;
+    margin-right: 10px;
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+    font-size: 24px;
+    position: absolute;
+    bottom: 0;
+}
+.jobsItem:hover>.jobMask>p{
+    color: #FFF;
+    bottom: 35%;
+}

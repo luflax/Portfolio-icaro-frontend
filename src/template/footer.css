@@ -1,0 +1,30 @@
+.footer{
+    background-color: #181818;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.footer div{
+    margin-right: 15px; 
+}
+.divLogo{
+    display: flex;
+    justify-content: center;
+}
+.divLogo img{
+    width: 25%;
+    height: 25%;
+}
+.divCenter{
+    color: #FFF;
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+.divCenter *:nth-child(2){
+    color: #AAA;
+    font-size: 13px;
+}
+.divIcons img{
+    margin: 10px;
+    cursor: pointer;
+}
