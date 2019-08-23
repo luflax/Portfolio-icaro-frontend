@@ -43,6 +43,8 @@ const Header = props => {
                     onClick={e => handleButtonClick(e, '/designs')}/>
                 <HeaderButton label='CONTACT' path='/contact' active={actualPage} 
                     onClick={e => handleButtonClick(e, '/contact')}/>
+                <HeaderButton label='ADMIN' path='/admin' active={actualPage} 
+                    onClick={e => handleButtonClick(e, '/admin')}/>
             </ul>
         </nav>
         : 
