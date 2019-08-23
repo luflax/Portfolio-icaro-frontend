@@ -16,7 +16,7 @@ export default props => {
             </Banner>
             <div className='pageMargin'>
                 <PageTitle/>
-                <Jobs desc='MOTIONS'/>
+                <Jobs jobtype='motions'/>
             </div>
             <Footer/>
         </>

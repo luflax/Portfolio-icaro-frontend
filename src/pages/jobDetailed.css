@@ -1,0 +1,100 @@
+.gallery{
+    border: 2px solid #181818;
+    border-radius: 2px;
+    position: relative;
+    height: 650px;
+    overflow: hidden;
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+.gallery.galleryFullscreen{
+    position: fixed;
+    top:0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: #000;
+    height: 100%;
+    z-index: 100;
+    border: none;
+}
+.galleryFullIcon{
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #353535;
+    width: 45px;
+    height: 45px;
+    color: #FFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom-left-radius: 50%;
+    cursor: pointer;
+}
+.galleryFullIcon:hover{
+    background: #555555;
+}
+.gallery li{
+    list-style: none;
+    position: absolute;
+    width: 100%;
+    height: calc(100% - 50px);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 2s;
+}
+.gallery li.fileActive{
+    opacity: 1;
+    visibility: visible;
+}
+.gallery li > *{
+    width: 100%;
+    height: 100%;
+}
+.galleryMenu{
+    height: 50px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: #181818;
+    transition: all 0.3s ease-out;
+    opacity: 1;
+    display: flex;
+    align-items: stretch;
+}
+.galleryMenu a{
+    flex: 1;
+    color: #FFF;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.galleryMenu a > *{
+    flex: 1;
+}
+.galleryMenu a:hover{
+    background: #464646dd;
+}
+.jobDesc{
+    margin-top: 50px;
+}
+.jobDesc h3{
+    margin: 5px 0;
+    color: #181818DD;
+    font-size: 20px;
+}
+.jobDesc p{
+    margin: 0;
+    color: #181818BB;
+    font-size: 18px;
+}
+.jobDesc h1{
+    letter-spacing: 2px;
+    color: #d0a266;
+    font-weight: 100;
+    font-size: 40px;
+}

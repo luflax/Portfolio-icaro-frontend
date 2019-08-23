@@ -61,6 +61,7 @@
     margin-bottom: 20px;
     padding: 5px;
     outline-color: #181818;
+    resize: vertical;
 }
 
 .contactMain form input[type=submit]{

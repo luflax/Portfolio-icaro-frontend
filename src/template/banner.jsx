@@ -4,9 +4,11 @@ import './banner.css'
 
 const Banner = props => {
     return(
-        <div className="banner">
-            {props.children}
-        </div>
+        <>
+            <div className="banner">
+                {props.children}
+            </div>
+        </>
     )
 }
 

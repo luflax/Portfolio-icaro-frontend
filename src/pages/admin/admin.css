@@ -1,0 +1,27 @@
+.selectionMenu{
+    display: flex;
+}
+.selectionMenu input[type=button]{
+    flex: 1;
+    margin: 0 20px;
+    padding: 10px 0;
+
+    border: none;
+    background-color: #FFF; 
+    box-shadow: 0 3px #DDD;
+    cursor: pointer;
+    outline: none;
+}
+.selectionMenu input[type=button]:hover{
+    transform: translateY(-1px);
+}
+.adminJobsList {
+    list-style: none;
+}
+.adminJobsList li {
+    background: #BBB;
+    padding: 10px;
+    margin-top: 5px;
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+}

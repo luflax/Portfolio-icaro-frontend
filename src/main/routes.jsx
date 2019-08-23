@@ -7,6 +7,8 @@ import Motions from '../pages/motions'
 import Contact from '../pages/contact'
 import Ilustrations from '../pages/ilustrations'
 import Designs from '../pages/designs'
+import JobDetailed from '../pages/jobDetailed'
+import Admin from '../pages/admin/admin'
 
 export default props => {
     return(
@@ -14,11 +16,15 @@ export default props => {
             <Header/>
             <Switch>
                 <Route path='/' exact component={Reel} />
-                <Route path='/motions' component={Motions} />
-                <Route path='/ilustrations' component={Ilustrations} />
-                <Route path='/designs' component={Designs} />
-                <Route path='/contact' component={Contact} />
-                <Redirect path='*' to='/home'/>
+                <Route path='/motions' exact component={Motions} />
+                <Route path='/motions/:id' component={JobDetailed} />
+                <Route path='/ilustrations' exact component={Ilustrations} />
+                <Route path='/ilustrations/:id' component={JobDetailed} />
+                <Route path='/designs' exact component={Designs} />
+                <Route path='/designs/:id' component={JobDetailed} />
+                <Route path='/contact' exact component={Contact} />
+                <Route path='/admin' exact component={Admin} />
+                <Redirect path='*' to='/'/>
             </Switch>
         </>
 )}

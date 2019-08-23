@@ -11,7 +11,7 @@ export default props => (
             <h3>Aqui fica os convite de festa</h3>
         </Banner>
         <div className="pageMargin">
-            <Jobs/>
+            <Jobs jobtype='designs'/>
         </div>
         <Footer/>
     </>

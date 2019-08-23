@@ -12,7 +12,7 @@ export default props => (
             <h3>Rabisco pra carai, pó fala</h3>
         </Banner>
         <div className="pageMargin">
-            <Jobs desc='ILUSTRATIONS'/>
+            <Jobs jobtype='ilustrations'/>
         </div>
         <Footer/>
     </>

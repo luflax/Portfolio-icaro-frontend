@@ -6,7 +6,7 @@ export default props => {
     buttonClasses += props.active == props.path ? ' active' : ''
     return (
         <li>
-            <a href={props.path} className={buttonClasses} onClick={props.onClick}>
+            <a className={buttonClasses} onClick={props.onClick}>
             {props.label}</a>
         </li>
     )

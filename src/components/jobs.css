@@ -11,9 +11,11 @@
     transition: all 1s;
     position: relative;
     background: #fff;
+    height: 400px;
 }
 .jobsItem>img{
     width: 100%;
+    height: 100%;
 }
 .jobMask{
     position: absolute;

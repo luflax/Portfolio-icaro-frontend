@@ -7,7 +7,7 @@ import './app.css'
 export default props => {
     return(
         <>
-        <BrowserRouter>
+        <BrowserRouter onEnter={() => window.scrollTo(0, 0)}>
             <Routes/>
         </BrowserRouter>
         </>
