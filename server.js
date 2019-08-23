@@ -4,7 +4,9 @@ const path = require('path')
 
 const app = express()
 
-app.use('/', serveStatic(path.join(__dirname, '/build')))
+app.get('*', (req, res) => res.sendFile(path.resolve('build', 'index.html')))
+
+//app.use('/', serveStatic(path.join(__dirname, '/build')))
 
 const port = process.env.PORT || 8080
 app.listen(port)
