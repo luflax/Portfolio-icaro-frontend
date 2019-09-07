@@ -9,6 +9,7 @@ import Ilustrations from '../pages/ilustrations'
 import Designs from '../pages/designs'
 import JobDetailed from '../pages/jobDetailed'
 import Admin from '../pages/admin/admin'
+import AdminAuth from '../pages/admin/adminAuth'
 
 export default props => {
     return(
@@ -23,7 +24,7 @@ export default props => {
                 <Route path='/designs' exact component={Designs} />
                 <Route path='/designs/:id' component={JobDetailed} />
                 <Route path='/contact' exact component={Contact} />
-                <Route path='/admin' exact component={Admin} />
+                <Route path='/admin' exact component={AdminAuth} />
                 <Redirect path='*' to='/'/>
             </Switch>
         </>

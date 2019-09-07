@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import api from '../main/api'
+import {api} from '../main/api'
 
 import './contact.css'
 import Banner from '../template/banner'

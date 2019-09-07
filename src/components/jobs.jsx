@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react'
 
 import './jobs.css'
 import JobItem from './jobItem'
-import api from '../main/api'
+import {api} from '../main/api'
 
 export default props => {
 

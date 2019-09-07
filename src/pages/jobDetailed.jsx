@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faArrowRight, faArrowLeft, faExpand} from '@fortawesome/free-solid-svg-icons'
 
-import api from '../main/api'
+import {api} from '../main/api'
 import Banner from '../template/banner'
 import Footer from '../template/footer'
 import './jobDetailed.css'

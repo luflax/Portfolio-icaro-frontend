@@ -2,7 +2,7 @@ import React from 'react'
 import {faPlus, faPen, faTrash, faFolderOpen} from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-import api from '../../main/api'
+import {protectedApi, api} from '../../main/api'
 import './selectedJob.css'
 import MaskIcon from '../../components/maskIcon'
 

@@ -1,9 +1,11 @@
 import React, {useEffect, useState} from 'react'
 
 import './admin.css'
-import api, {staticFilesPath} from '../../main/api'
+import {api, protectedApi, staticFilesPath} from '../../main/api'
 import JobsList from './jobsList'
 import SelectedJob from './selectedJob'
+import ButtonIcon from '../../components/buttonIcon'
+import {faSignOutAlt} from '@fortawesome/free-solid-svg-icons'
 
 
 export default props => {
@@ -11,18 +13,22 @@ export default props => {
     const [jobType, setJobType] = useState('')
     const [jobsList, setJobsList] = useState([])
     const [selectedJob, setSelectedJob] = useState('')
+    const [loading, setLoading] = useState(false)
 
     async function getJobsList(){
         if(!jobType) return
+        setLoading(true)
         try{
             const response = await api.get(`/${jobType}`)
             setJobsList(response.data)
         }catch(err){
             setJobsList([])
         }
+        setLoading(false)
     }
     
     function changeJobType(type){
+        if(loading || type == jobType) return;
         setSelectedJob('')
         setJobsList([])
         setJobType(type)
@@ -36,7 +42,7 @@ export default props => {
     async function updateJob(e){
         e.preventDefault()
         const { description, project, customer, isdone, _id } = selectedJob
-        await api.put(`/${jobType}`, {
+        await protectedApi.put(`/${jobType}`, {
             _id,
             description,
             customer,
@@ -48,12 +54,12 @@ export default props => {
     }
 
     async function deleteJob(id){
-        await api.delete(`/${jobType}/${id}`)
+        await protectedApi.delete(`/${jobType}/${id}`)
         getJobsList()
     }
 
     async function createJob(){
-        const response = await api.post(`/${jobType}`)
+        const response = await protectedApi.post(`/${jobType}`)
         setSelectedJob(response.data)
     }
 
@@ -63,7 +69,7 @@ export default props => {
 
         const formData = new FormData();
         formData.append('myFile', files[0])
-        const response = await api.post(`/${jobType}/${selectedJob._id}/uploadthumbnail`, formData, {headers: { 'content-type': 'multipart/form-data'}})
+        const response = await protectedApi.post(`/${jobType}/${selectedJob._id}/uploadthumbnail`, formData, {headers: { 'content-type': 'multipart/form-data'}})
         setSelectedJob({...selectedJob, thumbnail: `${staticFilesPath}/${response.data.filename}`})
         targetEl.value =''
     }
@@ -74,7 +80,7 @@ export default props => {
 
         const formData = new FormData();
         formData.append('myFile', files[0])
-        const response = await api.post(`/${jobType}/${selectedJob._id}/uploadfile`, formData, {headers: { 'content-type': 'multipart/form-data'}})
+        const response = await protectedApi.post(`/${jobType}/${selectedJob._id}/uploadfile`, formData, {headers: { 'content-type': 'multipart/form-data'}})
         setSelectedJob({...selectedJob, gallery: [...selectedJob.gallery, `${staticFilesPath}/${response.data.filename}`]})
         targetEl.value =''
     }
@@ -87,6 +93,7 @@ export default props => {
     return(
         <>
             <div className='pageMargin'>
+                <ButtonIcon onClick={props.doLogoff} label='Sign Out' icon={faSignOutAlt} btnClass='btnDanger'/>
                 <div className='selectionMenu'>
                     <input type="button" value="Motions"
                         onClick={e => changeJobType('motions')}
@@ -109,6 +116,7 @@ export default props => {
                                     deleteJob={deleteJob} 
                                     getSelectedJob={getSelectedJob} 
                                     createJob={createJob}
+                                    loading={loading}
                                 />
                             }
                             </ul>
