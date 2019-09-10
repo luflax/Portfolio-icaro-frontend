@@ -31,14 +31,14 @@ export default props => {
     async function doLogoff(){
         updateToken('')
     }
+    
     useEffect(()=> {
-        setToken(localStorage.authToken)
+        setToken(localStorage.authToken || '')
     })
 
     return (
         <>
            {
-
                 token.length ? 
                 <div>
                     <Admin token={token} doLogoff={doLogoff}/>

@@ -14,9 +14,7 @@ const api = axios.create({
 const protectedApi = axios.create({
     baseURL: `${url}/api`,
     headers: {
-        post:{
-            authorization: localStorage.authToken
-        }
+        authorization: localStorage.authToken
     }
 })
 
