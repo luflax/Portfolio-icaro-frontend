@@ -10,7 +10,7 @@
     }
 }
 .contactMain h1{
-    color: #181818;
+    color: #eee;
     font-weight: 300;
     letter-spacing: 2px;
 }
@@ -21,7 +21,7 @@
 .contactMain form label{
    margin-top: 10px;
    margin-bottom: 5px;
-   color: #777;
+   color: #eee;
 }
 .inputLg{
     height: 25px;
@@ -68,16 +68,16 @@
     width: 100%;
     max-width: 170px;
     padding: 8px;
-    background: #fff;
-    border: 3px solid #181818;
+    background: #181818;
+    border: 2px solid #eee;
     border-radius: 4px;
-    color: #181818;
+    color: #eee;
     font-size: 16px;
     font-weight: bold;
     transition: all .2s;
     cursor: pointer;
 }
 .contactMain form input[type=submit]:hover{
-    background: #181818;
-    color: #FFF;
+    background: #eee;
+    color: #181818;
 }

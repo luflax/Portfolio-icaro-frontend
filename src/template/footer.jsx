@@ -1,4 +1,7 @@
 import React from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {faFacebookSquare, faWhatsapp} from '@fortawesome/free-brands-svg-icons'
+import {faEnvelope} from '@fortawesome/free-solid-svg-icons';
 
 import Logo from '../images/logo.png'
 import './footer.css'
@@ -14,9 +17,9 @@ const Footer = props => {
                 <p>2019 - Todos os direitos reservados</p>
             </div>
             <div className='divIcons'>
-                <img src={Logo} alt="Facebook" width='40px' height='40px'/>
-                <img src={Logo} alt="E-mail" width='40px' height='40px'/>
-                <img src={Logo} alt="ZAP" width='40px' height='40px'/>
+                <FontAwesomeIcon icon={faFacebookSquare} size='2x'/>
+                <FontAwesomeIcon icon={faWhatsapp} size='2x'/>
+                <FontAwesomeIcon icon={faEnvelope} size='2x'/>
             </div>
         </div>
     )

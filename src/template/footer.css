@@ -24,7 +24,7 @@
     color: #AAA;
     font-size: 13px;
 }
-.divIcons img{
+.divIcons>*{
     margin: 10px;
     cursor: pointer;
 }
