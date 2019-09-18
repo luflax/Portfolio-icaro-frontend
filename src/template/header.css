@@ -41,8 +41,10 @@
     cursor: pointer;
 }
 .headerButton:hover{
-    border: 2px solid #FFF;
+    color: #c90000;
+    /*border: 2px solid #FFF;*/
 }
 .headerButton.active{
+    color: #c90000;
     border: 2px solid #FFF;
 }

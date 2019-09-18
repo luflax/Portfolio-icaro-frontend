@@ -11,11 +11,9 @@ export default props => {
     return (
         <>
             <Banner>
-                <h1>Motion Design</h1>
-                <h3>Ó que pica qeu faço ae</h3>
+                <h1>Motions</h1>
             </Banner>
             <div className='pageMargin'>
-                <PageTitle/>
                 <Jobs jobtype='motions'/>
             </div>
             <Footer/>

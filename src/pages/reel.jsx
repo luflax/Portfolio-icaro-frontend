@@ -13,16 +13,16 @@ export default props => {
     return (
         <>
             <Banner>
-                <h1>Icaro Silva</h1>
-                <h3>Designer, Motion Designer, Criação de Flyer de Farmácia</h3>
+                <h1>Reel</h1>
             </Banner>
-            <div className="pageMargin reelContainer">
-                <h1>Confira um pouco do meu trabalho</h1>
-                <Video
-                    loop
-                    controls={['PlayPause', 'Seek', 'Time', 'Volume', 'Fullscreen']}>
-                    <source src={ReelVideo} type="video/webm" />
-                </Video>
+            <div className="pageMargin">
+                <div className="reelContainer">
+                    <Video
+                        loop
+                        controls={['PlayPause', 'Seek', 'Time', 'Volume', 'Fullscreen']}>
+                        <source src={ReelVideo} type="video/webm" />
+                    </Video>
+                </div>
             </div>
             <Footer/>
         </>

@@ -18,8 +18,7 @@ export default props => {
     return (
         <>
             <Banner>
-                <h1>Need a design mto loco?</h1>
-                <h3>Fala cu pai using the form below</h3>
+                <h1>Contact</h1>
             </Banner>
             <div className="pageMargin">
                 <div className="contactMain">

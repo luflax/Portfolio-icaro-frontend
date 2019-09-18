@@ -9,7 +9,6 @@ export default props => (
     <>
         <Banner>
             <h1>Ilustrations</h1>
-            <h3>Rabisco pra carai, pó fala</h3>
         </Banner>
         <div className="pageMargin">
             <Jobs jobtype='ilustrations'/>

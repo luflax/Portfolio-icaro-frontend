@@ -8,7 +8,6 @@ export default props => (
     <>
         <Banner>
             <h1>Designs</h1>
-            <h3>Aqui fica os convite de festa</h3>
         </Banner>
         <div className="pageMargin">
             <Jobs jobtype='designs'/>
