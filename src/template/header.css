@@ -2,7 +2,7 @@
     background-color: #232323EE;
     padding: 10px;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     position: fixed;
     top: 0;
     width: 100%;
@@ -18,11 +18,37 @@
 .header ul{
     list-style: none;
     padding: 0 0 0 50px;
-    margin: 0 50px 0 auto;
+    margin: 0 50px 0 0;
 }
 .header ul>li{
     padding: 5px;
     display: inline;
+}
+@media screen and (max-width: 900px) {
+    .header ul.compacted{
+        display: none;
+    }
+    .header ul>li{
+        display: block;
+    }
+}
+.compactBtn{
+    margin-left: auto;
+    margin-right: 30px;
+    background: #fff;
+    border-radius: 2px;
+    display: none;
+    box-shadow: none;
+    border: 0;
+    outline: 0;
+    padding: 5px 8px;
+}
+
+@media screen and (max-width: 900px) {
+    .compactBtn{
+        display: block;
+    }
+
 }
 .headerButton{
     border: 2px solid #FFF0;
