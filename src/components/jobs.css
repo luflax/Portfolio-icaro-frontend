@@ -2,6 +2,11 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr)
 }
+@media screen and (max-width: 900px) {
+    .flexContainer{
+    grid-template-columns: 1fr;
+    }
+}
 .jobsItem{
     box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.05);
     border-radius: 4px;
