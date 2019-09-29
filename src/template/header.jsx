@@ -22,6 +22,16 @@ const Header = props => {
         props.history.push(path)
     }
 
+    function handleCompactButton(event) {
+        if(isMenuCompacted) {
+            setVerticalPosition(1)
+            setIsMenuCompacted(false)
+        } else{
+            setVerticalPosition(0)
+            setIsMenuCompacted(true)
+        }
+    }
+
     useEffect(() => {
         window.addEventListener('scroll', handleScroll);
         setActualPage(props.location.pathname)
@@ -32,24 +42,26 @@ const Header = props => {
     return (
         actualPage != '/admin' ?
         <nav className={headerClasses}>
-            <a href="#">
-                <img src={Logo} alt="Logo" width='80px' height='60px'/>
-            </a>
-            <ul className={isMenuCompacted ? 'compacted' : ''}>
-                <HeaderButton label='REEL' path='/' active={actualPage} 
-                    onClick={e => handleButtonClick(e, '')}/>
-                <HeaderButton label='MOTIONS' path='/motions' active={actualPage} 
-                    onClick={e => handleButtonClick(e, '/motions')}/>
-                <HeaderButton label='ILUSTRATIONS' path='/ilustrations' active={actualPage} 
-                    onClick={e => handleButtonClick(e, '/ilustrations')}/>
-                <HeaderButton label='DESIGNS' path='/designs' active={actualPage} 
-                    onClick={e => handleButtonClick(e, '/designs')}/>
-                <HeaderButton label='CONTACT' path='/contact' active={actualPage} 
-                    onClick={e => handleButtonClick(e, '/contact')}/>
-                <HeaderButton label='ADMIN' path='/admin' active={actualPage} 
-                    onClick={e => handleButtonClick(e, '/admin')}/>
-            </ul>
-            <button className='compactBtn' onClick={e => setIsMenuCompacted(!isMenuCompacted)}>
+            <div className="logo-with-menu">
+                <a href="#">
+                    <img src={Logo} alt="Logo" width='80px' height='60px'/>
+                </a>
+                <ul className={isMenuCompacted ? 'compacted' : ''}>
+                    <HeaderButton label='REEL' path='/' active={actualPage} 
+                        onClick={e => handleButtonClick(e, '')}/>
+                    <HeaderButton label='MOTIONS' path='/motions' active={actualPage} 
+                        onClick={e => handleButtonClick(e, '/motions')}/>
+                    <HeaderButton label='ILUSTRATIONS' path='/ilustrations' active={actualPage} 
+                        onClick={e => handleButtonClick(e, '/ilustrations')}/>
+                    <HeaderButton label='DESIGNS' path='/designs' active={actualPage} 
+                        onClick={e => handleButtonClick(e, '/designs')}/>
+                    <HeaderButton label='CONTACT' path='/contact' active={actualPage} 
+                        onClick={e => handleButtonClick(e, '/contact')}/>
+                    <HeaderButton label='ADMIN' path='/admin' active={actualPage} 
+                        onClick={e => handleButtonClick(e, '/admin')}/>
+                </ul>
+            </div>
+            <button className='compactBtn' onClick={handleCompactButton}>
                 <FontAwesomeIcon icon={faBars} size='lg'/>
             </button>
         </nav>

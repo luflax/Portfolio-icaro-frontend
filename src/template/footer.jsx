@@ -17,9 +17,9 @@ const Footer = props => {
                 <p>2019 - Todos os direitos reservados</p>
             </div>
             <div className='divIcons'>
-                <FontAwesomeIcon icon={faFacebookSquare} size='2x'/>
-                <FontAwesomeIcon icon={faWhatsapp} size='2x'/>
-                <FontAwesomeIcon icon={faEnvelope} size='2x'/>
+                <FontAwesomeIcon icon={faFacebookSquare} size='lg'/>
+                <FontAwesomeIcon icon={faWhatsapp} size='lg'/>
+                <FontAwesomeIcon icon={faEnvelope} size='lg'/>
             </div>
         </div>
     )
