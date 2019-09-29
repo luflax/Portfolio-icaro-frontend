@@ -6,7 +6,7 @@
     font-weight: 100;
 }*/
 .reelContainer{
-    border-left: 2px solid #c90000;
-    border-right: 2px solid #c90000;
+    border-left: 1px solid #c90000;
+    border-right: 1px solid #c90000;
     padding: 50px 20px;
 }
