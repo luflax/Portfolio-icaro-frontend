@@ -37,6 +37,12 @@
     flex-direction: row;
 }
 @media screen and (max-width: 900px) {
+    .header{
+        padding-top: 20px;
+    }
+    .header.affix{
+        margin-top: 0;
+    }
     .logo-with-menu{
         flex-direction: column;
     }

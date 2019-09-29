@@ -4,6 +4,11 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 }
+@media screen and (max-width: 900px) {
+    .footer{
+        grid-template-columns: 1fr;
+    }
+}
 .footer div{
     margin-right: 15px; 
 }
