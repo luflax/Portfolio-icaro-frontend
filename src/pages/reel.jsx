@@ -13,7 +13,7 @@ export default props => {
     return (
         <>
             <Banner>
-                <h1>Reel1</h1>
+                <h1>Reel2</h1>
             </Banner>
             <div className="pageMargin">
                 <div className="reelContainer">
